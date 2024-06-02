@@ -2,7 +2,7 @@
 area = 205
 phb = {
     'Operator': 0,
-    'Weather': 3906215
+    'Weather': int(str(area)+str(3906215))
     }
 # Define functions
 def areaIs(prelimArea):
@@ -16,13 +16,21 @@ def revSrc(num):
 def add():
     while True:
         newName = input('Name: ')
-        try: newNum = int(input('Number: '))
+        if len(newName) >= 30:
+            print('Name is too long.')
+            continue
+        break
+    while True:
+        try: newNum = int(input('Number (Excluding area code): '))
         except ValueError:
             print('Please input a valid number')
             continue
+        if len(str(newNum)) != 7:
+            print('Please input no more or less than 7 digits')
+            continue
         break
     print()
-    phb[newName]=area|newNum
+    phb[newName]=int(str(area)+str(newNum))
 
 def rem():
     remKey = input('Remove: ')
