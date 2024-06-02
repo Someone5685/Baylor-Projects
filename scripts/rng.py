@@ -1,10 +1,8 @@
-# rng.py, The RNG guessing game.
-
-# Copyright (C) Baylor Projects - All Rights Reserved - DO NOT DISTRIBUTE!
+# Copyright (C) Baylor Projects 2024 - All Rights Reserved
 # Unauthorized distribution of this file, via any medium is strictly prohibited
-# Written by Baylor, May 2024
-# COPYLEFT POLICY: Copying is authorized without consent. ALL DERIVATIVES MUST MAINTAIN THE SAME COPYRIGHT! Patent use is prohibited.
-print('\n\nCopyright (C) Baylor Projects - All Rights Reserved - DO NOT DISTRIBUTE!\n')
+# Written by Baylor
+# COPYLEFT POLICY: Copying is authorized without consent. Derivation, distribution, or patent use is prohibited.
+print('\n\nCopyright (C) Baylor Projects - All Rights Reserved\n')
 
 from random import randint
 while True:
@@ -27,9 +25,8 @@ while tries != 0:
             print('Please input an integer.')
             continue
         break
-    trycount+1
+    trycount = trycount+1
     if plr == num:
         print(f'Congratulations! You guessed my number in {trycount} tries!\nPress \'Enter\' to exit.')
         input()
-        break
-    break
+        exit()
