@@ -27,6 +27,6 @@ while tries != 0:
         break
     trycount = trycount+1
     if plr == num:
-        print(f'Congratulations! You guessed my number in {trycount} tries!\nPress \'Enter\' to exit.')
-        input()
-        exit()
+        if trycount == 1: print('Congratulations! You guessed my number in 1 try!')
+        else: print(f'Congratulations! You guessed my number in {trycount} tries!')
+        input('Press Enter to exit.')
