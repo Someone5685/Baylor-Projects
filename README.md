@@ -1,5 +1,7 @@
 # Baylor's Projects
 Baylor's Projects is a repository full of python scripts, that I make in my freetime for fun.
+# Prerequisites
+Python scripts may include libraries that are not installed by default. Relevant libraries required will be documented on the releases page.
 ## About me
 Hi, my name is Baylor, and I'm 13 years old. I started this project because one summer, I was thinking, "What am I even gonna do with this much time?" Well, I decided to start learning Python, and a few other languages. After I got the hang of it, I decided I would release my scripts I made for fun to the public. I already knew a little about GitHub, so I figured that'd be a great place to start. And that's when I thought of [baylorprojects.com](https://baylorprojects.com). So I hopped on CloudFlare and registered a domain. And here we are now, writing this.
 ## Reporting bugs
