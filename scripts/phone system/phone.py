@@ -7,17 +7,17 @@ print('\n\nCopyright (C) Baylor Projects - All Rights Reserved\n')
 # Library operations
 import phonebook
 pb = phonebook
-pb.areaIs(205)
 
 # Define settings
-area = 205
-print(f'Your area code is {area}. This can be changed in settings.\nDefault: 205')
-pbx = False
+class settings:
+    area = 205
+    pbx = False
+pb.areaIs(settings.area)
+print(f'Your area code is {settings.area}. This can be changed in settings.\nDefault: 205')
 
 # Define functions
 def setArea():
     while True:
-        global area
         try: prelimArea = int(input ('Area code: '))
         except ValueError:
             print('Value must be an integer.')
@@ -25,15 +25,13 @@ def setArea():
         if prelimArea > 999 or prelimArea < 200:
             print('Integer must be 200-999')
             continue
-        area = prelimArea
-        pb.areaIs(area)
+        settings.area = prelimArea
+        pb.areaIs(settings.area)
         break
 
-def settings():
+def changeSettings():
     while True:
-        global pbx
-        global area
-        print(f'\nArea Code: {area}')
+        print(f'\nArea Code: {settings.area}')
         print(f'PBX Mode (Unfinished): {pbx}')
         print('\nTo change a setting, type the first letter of it. To exit, type \'x\'')
         match input('Change setting: ').lower():
@@ -59,6 +57,6 @@ while True:
     match input('\nAction: ').lower():
         case 'c': call()
         case 'p': pb.run()
-        case 's': settings()
+        case 's': changeSettings()
         case 'x': exit()
         case _: print('Please input a valid choice.\n')

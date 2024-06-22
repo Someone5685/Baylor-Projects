@@ -26,7 +26,7 @@ def add():
             print('Please input a valid number')
             continue
         if len(str(newNum)) != 7:
-            print('Please input no more or less than 7 digits')
+            print('Please input exactly 7 digits')
             continue
         break
     print()
